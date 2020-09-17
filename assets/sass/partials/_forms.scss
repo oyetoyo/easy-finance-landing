@@ -1,0 +1,178 @@
+
+.form-control {
+  padding:  23px 15px;
+  margin-bottom: 15px;
+  font-size:  14px;
+  border: 1px solid $lines-color;
+
+  &:focus {
+    border:  solid 1px $accent-color;
+    outline: 1px;
+    box-shadow:  0 2px 6px -8px rgba($accent-color, .45);
+  }
+
+  ::placeholder {
+    color: #A2A2A2;
+  }
+}
+
+
+
+
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: $purplish;
+  padding:  8px 15px;
+  width: 100%;
+  margin-bottom: 15px;
+  max-width: 100%; /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  border: 1px solid $purplish;
+  border-radius: 4px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient.
+      for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+
+  */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')/*linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%)*/
+;
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right .7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: .65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+  display: none;
+}
+
+/* Focus style */
+.select-css:focus {
+  //border-color: #aaa;
+  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+  border:  solid 1px $purplish;
+  outline: 1px;
+  box-shadow:  0 2px 6px -8px rgba($purplish, .45);
+}
+
+/* Set options to normal weight */
+.select-css option {
+  font-weight:normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+  background-position: left .7em top 50%, 0 0;
+  padding: .6em .8em .5em 1.4em;
+}
+
+/* Disabled styles */
+.select-css:disabled, .select-css[aria-disabled=true] {
+  color: graytext;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+.select-css:disabled:hover, .select-css[aria-disabled=true] {
+  border-color: #aaa;
+}
+
+
+
+
+
+
+/* Radio Group */
+.radio-toolbar {
+  //margin-left: 14px;
+  margin-bottom: 20px;
+}
+
+.radio-toolbar input[type="radio"] {
+  display:none;
+}
+
+.radio-toolbar label {
+  display:inline-block;
+  font-size:16px;
+  padding: 7px 12px 7px 12px;
+  margin: 0;
+  border-radius: 4px;
+  border: 1px solid $purplish;
+  cursor: pointer;
+  color: $purplish;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  //box-shadow: $feather-shadow;
+
+  &:nth-child(2) {
+
+  }
+}
+
+.radio-toolbar label:hover {
+  background-color: #FFF;
+  color: #7E858B;
+  /*-webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);*/
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color:$purplish;
+  color: #FFF;
+  border-color: $purplish;
+  font-weight: bold;
+}
+
+
+
+
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 30px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #6F73D6 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #00000029;
+  border: 3px solid #FFFFFF;
+  opacity: 1;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+
+
+

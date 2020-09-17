@@ -1,0 +1,33 @@
+
+$title-header-color : #0A194E;
+$accent-color : #3BE5BF;
+$text-color: #687781;
+$icons-color: #007FF7;
+$lines-color: #ADD4F5;
+$highlights-color: #74BBF7;
+$purplish: #7175D9;
+
+$new-orange: #F47C21;
+$new-red: #EF4136;
+$new-black: #434343;
+
+
+
+// CUSTOM THEME
+$theme-colors: (
+  "accent-color": $accent-color,
+  "new-orange": $new-orange,
+  "new-red": $new-red,
+  "new-black": $new-black,
+  "purplish": $purplish,
+  "blueblack": $title-header-color,
+);
+
+
+
+
+// Global Settings
+$easy-transition      :                  all 0.6s ease-in-out;
+$feather-shadow       :                  0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+$soft-shadow          :                  0 0 5px 5px rgba(0, 0, 0, 0.03);
+$soft-border-radius   :                  10px;
