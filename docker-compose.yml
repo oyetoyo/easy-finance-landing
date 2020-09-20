@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-    landing:
-        image: landing
-        build:
-        context: .
+  landing:
+    image: landing
+    build:
+      context: .
