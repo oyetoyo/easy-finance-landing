@@ -2,6 +2,6 @@ version: '3.7'
 
 services:
     merchants-landing-page:
-    image: merchants-landing-page
-    build:
-      context: .
+        image: merchants-landing-page
+        build:
+        context: .
