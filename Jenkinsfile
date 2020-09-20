@@ -32,7 +32,7 @@ pipeline {
         COMMIT_TAG = sh(returnStdout: true, script: 'git rev-parse HEAD').trim().take(12)
       }
       steps{
-        sh "docker-compose build merchants-landing-page"
+        sh "docker-compose build"
         sh "docker tag merchants-landing-page:latest ${IMAGE_REPO_NAME}:${COMMIT_TAG}-prod"
       }
     }
