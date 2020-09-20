@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    SERVICE_NAME="merchants-landing-page"
+    SERVICE_NAME="landing"
     IMAGE_REPO_NAME = "${CONTAINER_REGISTRY}/leverinvl/${SERVICE_NAME}"
   }
   parameters {
@@ -33,7 +33,7 @@ pipeline {
       }
       steps{
         sh "docker-compose build"
-        sh "docker tag merchants-landing-page:latest ${IMAGE_REPO_NAME}:${COMMIT_TAG}-prod"
+        sh "docker tag landing:latest ${IMAGE_REPO_NAME}:${COMMIT_TAG}-prod"
       }
     }
     stage('docker push'){
@@ -65,7 +65,7 @@ pipeline {
             COMMIT_TAG = sh(returnStdout: true, script: 'git rev-parse HEAD').trim().take(12)
         }
         steps{
-            sh "docker image rm merchants-landing-page:latest"
+            sh "docker image rm landing:latest"
             sh "docker image rm ${IMAGE_REPO_NAME}:${COMMIT_TAG}-prod"
         }
     }
