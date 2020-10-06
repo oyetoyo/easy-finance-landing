@@ -56,7 +56,7 @@ pipeline {
             IMAGE = "${IMAGE_REPO_NAME}:${COMMIT_TAG}-prod"
           }
       steps{
-          sh "doctl registry kubernetes-manifest | kubectl apply -f -"
+          sh "doctl kubernetes cluster kubeconfig save 094e2d4a-606c-44f7-a3d3-251613187bc9"
           sh "bash deploy.sh"
       }
     }
