@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>MerchantBox | SME business Growth and Profitability Partner</title>
+    <title>MerchantBox | Better banking and commerce</title>
 
     <!-- SEO CONFIG -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,7 @@
 
     <!-- Third Party Resources -->
     <link rel="stylesheet" href="assets/third-party/icofont/icofont.min.css" />
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
 </head>
 
@@ -72,13 +73,15 @@
                             <div class="p-3"></div>
                             <!-- hacking space -->
 
-                            <h1 class="main-banner-text">Small Business Growth Partner</h1>
+                            <!-- <h1 class="main-banner-text">Small Business Growth Partner</h1> -->
+                            <h1 class="main-banner-text">Welcome to Better banking and commerce</h1>
                             <!-- <h1 class="main-banner-text">SME business <span>Growth</span> and <span>Profitability</span> Partner</h1> -->
                             <hr class="large-border">
                             <p class="home-description">
                                 <!-- A collection of business tools aimed at providing the support and infrastructure required to help promote SME growth. -->
-                                A digital tool-box for banking, loans, payment and commerce; built to empower you and
-                                your business
+                                <!-- A digital tool-box for banking, loans, payment and commerce; built to empower you and
+                                your business -->
+                                Easy payments | Quick loans | Business Training
                             </p>
                             <a href="https://app.merchants.ng/register"
                                 class="btn btn-accent-color font-weight-bold feather-shadow px-5 mb-2 mr-md-3">Get
@@ -199,8 +202,10 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="px-5 pt-5">
-                                    <h3 class="large-texts text-white">Get access to Business &amp;<br>Personal Loans
+                                    <!-- <h3 class="large-texts text-white">Get access to Business &amp;<br>Personal Loans -->
+                                    <h3 class="large-texts text-white">Quick Loans
                                     </h3>
+                                    <span class="text-white">Business Loans | Personal Loans | Device Loans</span>
                                     <hr class="large-border">
                                 </div>
                             </div>
@@ -319,7 +324,7 @@
 
 
     <!-- POS Pane -->
-    <section id="posPane" class="pos-pane">
+    <section id="posPane" class="pos-pane d-none">
         <div class="container">
             <div class="row">
 
@@ -666,7 +671,15 @@
     <script src="assets/js/jquery-easing/jquery.easing.min.js"></script>
     <script src="assets/js/scrolling-nav.js"></script>
     <script src="index.js"></script>
-
+    <script>
+        function initFreshChat() {
+          window.fcWidget.init({
+            token: "e3bf99c2-ed12-4cdc-ba73-7b16cf2e747e",
+            host: "https://wchat.freshchat.com"
+          });
+        }
+        function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+      </script>
 </body>
 
 </html>
