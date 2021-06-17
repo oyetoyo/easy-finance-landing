@@ -56,9 +56,9 @@ pipeline {
             IMAGE = "${IMAGE_REPO_NAME}:${COMMIT_TAG}-prod"
           }
       steps{
-          sh "doctl kubernetes cluster kubeconfig save 094e2d4a-606c-44f7-a3d3-251613187bc9"
-          // sh "bash deploy.sh"
-          sh "kubectl set image deployments/merchants-landing-page merchants-landing-page=${IMAGE}"
+          sh "doctl registry kubernetes-manifest | kubectl --context=do-fra1-k8s-merchants-ng apply -f -"
+          sh "bash deploy.sh"
+          // sh "kubectl set image deployments/merchants-landing-page merchants-landing-page=${IMAGE}"
       }
     }
     stage('Cleanup'){
