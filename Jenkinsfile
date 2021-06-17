@@ -57,7 +57,8 @@ pipeline {
           }
       steps{
           sh "doctl kubernetes cluster kubeconfig save 094e2d4a-606c-44f7-a3d3-251613187bc9"
-          sh "bash deploy.sh"
+          # sh "bash deploy.sh"
+          sh "kubectl set image deployments/merchants-landing-page merchants-landing-page=${IMAGE}"
       }
     }
     stage('Cleanup'){
