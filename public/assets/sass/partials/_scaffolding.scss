@@ -1,28 +1,36 @@
+.first-carousel{
+  background: url("../images/bg/store-owner.jpg") left no-repeat !important;
+  background-size: cover !important;
+}
+
+
+.second-carousel{
+  background: url("../images/bg/money-bg.svg") left no-repeat !important;
+  background-size: cover !important;
+}
+
+
 .top-section {
-  background: url("../images/bg/store-owner.jpg") left no-repeat;
-  background-size: cover;
+  // background: url("../images/bg/store-owner.jpg") left no-repeat;
+  // background-size: cover;
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+  .forceImage {
+    width: 170px;
+  }
 
-  .overlay {
-    height: 100vh;
-    background: rgba(0,0,0,0.3);
+  .main-banner-text {
+    color: #FFF !important;
+    font-weight: 800;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    font-size: 42px;
 
-    .forceImage {
-      width: 170px;
-    }
-
-    .main-banner-text {
-      color: #FFF;
+    span {
+      color: $accent-color;
       font-weight: 800;
-      padding-top: 50px;
-      margin-bottom: 40px;
-      font-size: 42px;
-
-      span {
-        color: $accent-color;
-        font-weight: 800;
-      }
     }
-
 
 
     p.home-description {
@@ -196,7 +204,17 @@ hr.large-border-center {
 
 }
 
-
+.carousel-indicators {
+  .active{
+    background-color: $accent-color !important;
+  }
+  li{
+    width: 5px !important;
+    height: 3px !important;
+    padding: 8px !important;
+    border-radius: 100% !important;
+  }
+}
 
 
 
@@ -541,7 +559,6 @@ hr.large-border-center {
 @media (pointer: coarse) and (hover: none) {
 
   .top-section {
-    .overlay {
       p.home-description {
         font-size: 18px;
       }
@@ -553,7 +570,6 @@ hr.large-border-center {
       .main-banner-text {
         font-size: 32px;
       }
-    }
   }
 
 

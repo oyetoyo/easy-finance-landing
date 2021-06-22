@@ -11772,75 +11772,79 @@ a:focus {
   text-decoration: none;
 }
 
-.top-section {
-  background: url("../images/bg/store-owner.jpg") left no-repeat;
-  background-size: cover;
+.first-carousel {
+  background: url("../images/bg/store-owner.jpg") left no-repeat !important;
+  background-size: cover !important;
+}
+
+.second-carousel {
+  background: url("../images/bg/money-bg.svg") left no-repeat !important;
+  background-size: cover !important;
 }
 
 .top-section .overlay {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-.top-section .overlay .forceImage {
+.top-section .forceImage {
   width: 170px;
 }
 
-.top-section .overlay .main-banner-text {
-  color: #FFF;
+.top-section .main-banner-text {
+  color: #FFF !important;
   font-weight: 800;
   padding-top: 50px;
   margin-bottom: 40px;
   font-size: 42px;
 }
 
-.top-section .overlay .main-banner-text span {
+.top-section .main-banner-text span {
   color: #3BE5BF;
   font-weight: 800;
 }
 
-.top-section .overlay p.home-description {
+.top-section .main-banner-text p.home-description {
   line-height: normal;
   color: #FFF;
   font-size: 22px;
 }
 
-.top-section .overlay .bubble-scroller {
+.top-section .main-banner-text .bubble-scroller {
   color: #FFF;
   display: block;
   margin-top: 60px;
   text-decoration: none;
 }
 
-.top-section .overlay .bubble-scroller i {
+.top-section .main-banner-text .bubble-scroller i {
   font-size: 36px;
 }
 
-.top-section .overlay .bubble-scroller span {
+.top-section .main-banner-text .bubble-scroller span {
   font-size: 9px;
 }
 
-.top-section .overlay .bubble-scroller:hover {
+.top-section .main-banner-text .bubble-scroller:hover {
   text-decoration: none;
 }
 
-.top-section .overlay .navbar-light .btn.btn-outline-new-black {
+.top-section .main-banner-text .navbar-light .btn.btn-outline-new-black {
   color: #434343;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
-.top-section .overlay .navbar-light .btn.btn-outline-new-black:hover {
+.top-section .main-banner-text .navbar-light .btn.btn-outline-new-black:hover {
   color: #FFFFFF;
 }
 
-.top-section .overlay .navbar-light .btn.btn-new-orange {
+.top-section .main-banner-text .navbar-light .btn.btn-new-orange {
   color: #FFFFFF;
   -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
           box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
-.top-section .overlay .navbar-light .btn.btn-new-orange:hover {
+.top-section .main-banner-text .navbar-light .btn.btn-new-orange:hover {
   color: #FFFFFF;
 }
 
@@ -11960,6 +11964,17 @@ hr.large-border-center {
 
 .loans-pane .loans-bagger .calculator-div .repayment-amount {
   color: #7175D9;
+}
+
+.carousel-indicators .active {
+  background-color: #3BE5BF !important;
+}
+
+.carousel-indicators li {
+  width: 5px !important;
+  height: 3px !important;
+  padding: 8px !important;
+  border-radius: 100% !important;
 }
 
 .receive-pane {
@@ -12265,13 +12280,13 @@ hr.large-border-center {
 }
 
 @media (pointer: coarse) and (hover: none) {
-  .top-section .overlay p.home-description {
+  .top-section p.home-description {
     font-size: 18px;
   }
-  .top-section .overlay .forceImage {
+  .top-section .forceImage {
     width: 160px;
   }
-  .top-section .overlay .main-banner-text {
+  .top-section .main-banner-text {
     font-size: 32px;
   }
   .features-pane {
